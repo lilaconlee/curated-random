@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './Randomizer.scss';
+
 function randArray(array) {
   return array[Math.floor(Math.random() * array.length)];
 }
@@ -27,10 +29,14 @@ class Randomizer extends React.Component {
 
   render() {
     return (
-      <div>
-        <div>{this.state.character}</div>
-        <button onClick={this.props.onUpdate}>update</button>
-        <button onClick={this.setNewCharacter}>new character</button>
+      <div className="randomizer-container">
+        <div className="randomizer-text-container">
+          <h1 className="randomizer-character">{this.state.character}</h1>
+        </div>
+        <div className="randomizer-button-container">
+          <button className="randomizer-button randomizer-button-border" onClick={this.props.onUpdate}>update</button>
+          <button className="randomizer-button" onClick={this.setNewCharacter}>new character</button>
+        </div>
       </div>
     );
   }

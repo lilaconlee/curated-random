@@ -2,6 +2,8 @@ import React from 'react';
 
 import CharacterRow from './CharacterRow';
 
+import './CharacterSelection.scss';
+
 class CharacterSelection extends React.Component {
   constructor(props) {
     super(props);
@@ -13,9 +15,9 @@ class CharacterSelection extends React.Component {
     });
 
     return (
-      <div>
+      <div className="selection-container">
         {charRows}
-        <button onClick={this.props.onUpdate}>done updating</button>
+        <button className="selection-button" onClick={this.props.onUpdate}>done updating</button>
       </div>
     );
   }
