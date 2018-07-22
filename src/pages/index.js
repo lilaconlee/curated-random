@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
-import Layout from "../components/Layout";
+import Layout from '../components/Layout';
 
-import "../styles/main.scss";
+import '../styles/main.scss';
 
 export default ({data}) => {
 	const chars = data.site.siteMetadata.testCharacters;

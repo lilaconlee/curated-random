@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 function randArray(array) {
   return array[Math.floor(Math.random() * array.length)];

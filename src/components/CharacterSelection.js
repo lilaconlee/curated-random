@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import CharacterRow from "./CharacterRow";
+import CharacterRow from './CharacterRow';
 
 class CharacterSelection extends React.Component {
   constructor(props) {
@@ -17,7 +17,7 @@ class CharacterSelection extends React.Component {
         {charRows}
         <button onClick={this.props.onUpdate}>done updating</button>
       </div>
-      );
+    );
   }
 }
 

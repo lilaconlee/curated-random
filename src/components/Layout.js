@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import CharacterSelection from "./CharacterSelection";
-import Randomizer from "./Randomizer";
+import CharacterSelection from './CharacterSelection';
+import Randomizer from './Randomizer';
 
 function View(props) {
   const updating = props.update;
