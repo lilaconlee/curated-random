@@ -16,7 +16,7 @@ class CharacterSelection extends React.Component {
 
     return (
       <div className="selection-container">
-        {charRows}
+        <div>{charRows}</div>
         <button className="selection-button" onClick={this.props.onUpdate}>done updating</button>
       </div>
     );
