@@ -1,14 +1,16 @@
 import React from "react";
 
 import CharacterSelection from "./CharacterSelection";
+import Randomizer from "./Randomizer";
 
 function View(props) {
   const updating = props.update;
 
   if (updating) {
-    return <CharacterSelection />
+    return <CharacterSelection onUpdate={props.onUpdate} characters={props.characters}/>
   }
-  return null;
+
+  return <Randomizer onUpdate={props.onUpdate} />;
 }
 
 class Layout extends React.Component {
@@ -22,6 +24,7 @@ class Layout extends React.Component {
   componentWillMount = () => {
     const foo = window.localStorage.getItem(this.props.characters[0]);
     if (!foo) {
+      this.setState({update: true});
       this.updateLocalStorage();
     }
   }
@@ -40,10 +43,7 @@ class Layout extends React.Component {
 
   render() {
     return (
-      <div>
-        <button onClick={this.toggleUpdate}>Update</button>
-        <View update={this.state.update} characters={this.props.characters}/>
-      </div>
+      <View update={this.state.update} onUpdate={this.toggleUpdate} characters={this.props.characters}/>
     );
   }
 }

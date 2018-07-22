@@ -1,6 +1,6 @@
 import React from "react";
 
-import Character from "./Character";
+import CharacterRow from "./CharacterRow";
 
 class CharacterSelection extends React.Component {
   constructor(props) {
@@ -8,10 +8,16 @@ class CharacterSelection extends React.Component {
   }
 
   render() {
-    const char = 'Bayonetta';
-    const charEnabled = localStorage.getItem(char);
+    const charRows = this.props.characters.map((character) => {
+      return <CharacterRow key={character} name={character} enabled={window.localStorage.getItem(character) === 'true'}/>
+    });
 
-    return <Character name={char} enabled={charEnabled} />;
+    return (
+      <div>
+        {charRows}
+        <button onClick={this.props.onUpdate}>done updating</button>
+      </div>
+      );
   }
 }
 

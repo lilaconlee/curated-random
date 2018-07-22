@@ -1,6 +1,11 @@
 module.exports = {
   plugins: ['gatsby-plugin-sass'],
   siteMetadata: {
+    testCharacters: [
+      "Lucas",
+      "Ness",
+      "Waluigi"
+    ],
     characters: [
       "Bayonetta",
       "Bowser",
