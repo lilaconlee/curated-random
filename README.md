@@ -1,10 +1,7 @@
-# gatsby-starter-hello-world
-Starter with the bare essentials needed for a [Gatsby](https://www.gatsbyjs.org/) site
+curated random
+==============
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
-```
-gatsby new gatsby-site https://github.com/gatsbyjs/gatsby-starter-hello-world
-```
+Get a random smash 4 character from a curated list. Includes DLC, does not include mii fighters.
 
 ## Running in development
 `gatsby develop`
