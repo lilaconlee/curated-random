@@ -10,6 +10,8 @@ class CharacterSelection extends React.Component {
   }
 
   render() {
+    if (!window) { return <div></div> }
+
     const charRows = this.props.characters.map((character) => {
       return <CharacterRow key={character} name={character} enabled={window.localStorage.getItem(character) === 'true'}/>
     });

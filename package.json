@@ -3,6 +3,7 @@
   "description": "Gatsby hello world starter",
   "license": "MIT",
   "scripts": {
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "develop": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve"
@@ -12,5 +13,8 @@
     "gatsby": "^1.9.277",
     "gatsby-link": "^1.6.40",
     "gatsby-plugin-sass": "^1.0.26"
+  },
+  "devDependencies": {
+    "gh-pages": "^1.2.0"
   }
 }

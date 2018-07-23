@@ -7,6 +7,8 @@ function randArray(array) {
 }
 
 function getEnabledCharacters() {
+  if (typeof window === 'undefined') { return []; }
+
   const enabledCharacters = Object.keys(window.localStorage).filter((item) => {
     return window.localStorage.getItem(item) === 'true';
   });

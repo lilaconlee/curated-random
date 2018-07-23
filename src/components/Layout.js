@@ -21,7 +21,7 @@ class Layout extends React.Component {
     };
   }
 
-  componentWillMount = () => {
+  componentDidMount = () => {
     const testValue = window.localStorage.getItem(this.props.characters[0]);
     if (!testValue) {
       this.setState({update: true});
