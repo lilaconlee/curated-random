@@ -1,5 +1,6 @@
 module.exports = {
   plugins: ['gatsby-plugin-sass'],
+  pathPrefix: '/curated-random',
   siteMetadata: {
     testCharacters: [
       "Lucas",
